@@ -57,6 +57,12 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card2 {
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
 .card img {
     object-fit: cover;
 }
@@ -107,7 +113,6 @@ header {
     margin-top: -8px;
 }
 /****** infos-group ***********/
-
 .headline {
     margin-bottom: 35px;
 }
@@ -221,7 +226,6 @@ header {
 
 .hebergement-cards .card {
     padding-bottom: 15px;
-    gap: 20px;
 }
 
 .hebergement-cards .card-content {
@@ -229,7 +233,6 @@ header {
     padding: 0px 10px;
     flex-direction: column;
     align-items: flex-start;
-    align-self: stretch;
 }
 
 .hebergement-cards img {
@@ -248,6 +251,7 @@ header {
 .hebergement-cards .card-subtitle {
     margin: 5px 0px;
 }
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -293,9 +297,72 @@ header {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
 
+.activites-sec {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: 35px;
+}
 
+.activites-title {
 
+    height: 30.019px;
+    align-self: stretch;
+    margin-bottom: 30px;
+}
+
+.activites-cards {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+}
+
+.activites-cards img {
+
+    width: 297.5px;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activites-cards .card-content {
+
+    display: flex;
+    padding: 20px 19px;
+    flex-direction: column;
+}
+
+/****** Menu bot ***********/
+
+.menu-bot {
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+}
+
+.menu-propos {
+
+    padding: 20px;
+    margin-right: 200px;
+}
+
+.menu-hebergements {
+
+    padding: 20px;
+    margin-right: 200px;
+}
+
+.menu-assistance {
+
+    padding: 20px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
