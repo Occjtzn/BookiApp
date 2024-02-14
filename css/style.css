@@ -28,19 +28,21 @@ h3 {
 .fa-solid {
     color: var(--main-color);
 }
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -88,7 +90,8 @@ header {
 
 .logo img {
     width: 61.09px;
-    height: 19px;   
+    height: 19px;
+    margin: 30px;  
 }
 
 /****** Menu ***********/
@@ -108,13 +111,17 @@ header {
 }
 .menu a {
     padding-top: 19px;
-    margin-top: -8px;
+    margin-top: -43px;
 }
 
 /****** infos-group ***********/
 
 .headline {
     margin-bottom: 35px;
+}
+
+.headline h1 {
+    margin-bottom: 5px;
 }
 .search-bar {
     display: flex;
@@ -208,7 +215,6 @@ header {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
 }
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
@@ -342,7 +348,6 @@ header {
 .menu-bottom {
     background-color: var(--main-bg-color);
     display: flex;
-    align-items: center;
     margin-top: 35px;
     padding: 20px;
 }
@@ -354,6 +359,17 @@ header {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
+/* Large devices (Big monitor, more than 1440px) */
+
+@media (min-width: 1440px) {
+    .main-container {
+        width: 90%;
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .form-filter {
@@ -420,28 +436,58 @@ header {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
     .main-container {
-        padding: 0 15px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
     header {
         flex-direction: column;
+    }
+    header .logo-header {
+        margin-top: 20px;
     }
     .logo {
         align-items: center;
         margin-bottom: 20px;
     }
+    .menu {
+        width: 100%;
+    }
+    .menu a {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
     .menu a:first-child {
         border-bottom: solid 2px var(--main-color);
         border-top: none;
+        margin-right: 0;
     }
     .menu a:last-child {
         border-bottom: solid 2px var(--main-bg-color);
     }
-    
-    .search-bar {
-        margin-bottom: 115px;   
+    .infos-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
     }
 
+    .infos-group .headline {
+        display: flex;
+        flex-direction: column;
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 145px;  
+    }
+
+    .search-bar input {
+        margin-right: 80px;
+    }
     .search-bar .btnsearch-desktop {
         display: none;
     }
@@ -450,9 +496,14 @@ header {
         padding: 15px 16px 15px 15px;
         border-radius: 15px;
         border: 1px solid var(--Blue, #0065FC);
-        color: var(--White, #FFF);
+        background: var(--Blue, #0065FC);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         font-weight: 700;
         cursor: pointer;
+    }
+
+    .search-bar .btnsearch-mobile i {
+        color: white;
     }
     .form-filter {
         width: 100%;
@@ -466,11 +517,24 @@ header {
         margin-bottom: 100px;
     }
     .filtre-element {
+        display: flex;
         width: 35%;
         margin-left: 0!important;
     }
+
+    .filtre-element i {
+        margin-right: 15px;
+    }
     .filtre-element h3 {
         font-size: 14px;
+    }
+    .infobar {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .infobar .circle {
+        width: 40px;
     }
     .hebergements {
         order: 2;
@@ -502,6 +566,10 @@ header {
         font-size: 14px;
     }
 
+    .populaires {
+        margin-top: 35px;
+        border-radius: 0px!important;
+    }
     .populaires-cards {
         display: flex;
         flex-direction: column;
@@ -519,5 +587,9 @@ header {
     .menu-bottom {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .column-footer {
+        width: 100%;
     }
 }
