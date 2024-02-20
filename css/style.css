@@ -554,6 +554,10 @@ nav {
         width: 24px;
         height: 24px;
     }
+
+    .infobar a {
+        width: 80%;
+    }
     .hebergements {
         order: 2;
         background-color: white!important;
