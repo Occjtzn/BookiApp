@@ -29,7 +29,7 @@ Le projet met en avant l'utilisation de la sémantique HTML, des layouts en **Fl
 1. Clonez le dépôt :
 
 ```bash
-git clone <URL_DU_DEPOT>
+git clone <https://github.com/Occjtzn/BookiApp>
 ```
 
 2. Accédez au dossier :
